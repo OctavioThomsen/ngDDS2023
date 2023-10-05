@@ -1,0 +1,32 @@
+<div>
+  <div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="title">Nombre</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          required
+          [(ngModel)]="curso.nombre"
+          name="title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="content">Fecha inicio</label>
+        <input
+          class="form-control"
+          id="content"
+          required
+          [(ngModel)]="curso.fechaInicio"
+          name="content"
+        />
+      </div>
+      <button (click)="saveCurso()" class="btn btn-success">Submit</button>
+    </div>
+    <div *ngIf="submitted">
+      <h4>Curso was submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newCurso()">Add</button>
+    </div>
+  </div>
+</div>
