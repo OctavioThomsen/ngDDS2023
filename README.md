@@ -1,7 +1,9 @@
 # Instalacion Frontend Angular
 + Instalar node.js: consultar en https://nodejs.org/es/
 + Abrir una consola (PowerShell, CMD, TERM) para actualizar npm ejecutando el comando
-```npm install npm@latest –g
+
+```npm install npm@latest –g```
+
 + Instalar Angular CLI (este paso nos permite usar el comando ng)
 ```npm install -g @angular/cli
 + Instalar BootStrap para el estilo
