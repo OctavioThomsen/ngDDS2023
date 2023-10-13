@@ -13,7 +13,7 @@ npm install -g @angular/cli
 npm install bootstrap@4.6.1
 ```
 # Configurar entorno de desarrollo
-## Lo primero que hay que hacer es clonar el proyecto de GitHub
+Lo primero que hay que hacer es clonar el proyecto de GitHub
 + desde la consola posicionarse en el directorio donde se desea descargar el código y ejecutar
 ```
 git clone https://github.com/dds-frd-utn/ngDDS2023
@@ -33,16 +33,16 @@ ng serve --proxy-config=src/proxy.conf.json
 Este comando tiene configurada la creación de un proxy para evitar los problemas relacionados a [CORS] (https://www.juannicolas.eu/cors-que-es-y-como-funciona/)
 
 # Desarrollo
-## Aqui se debe realizar el desarrollo de la aplicación. Hay que tener en cuenta que es necesario tener el backend corriendo para que todo funcione.
+Aqui se debe realizar el desarrollo de la aplicación. Hay que tener en cuenta que es necesario tener el backend corriendo para que todo funcione.
 
 # Compilar y generar la distribución 
-## Al terminar el desarrollo es necesario crear los archivos de distribución del proyecto. Esto consiste en un proceso que elimina la dependencia al entorno de desarrollo que creamos localmente, generando los archivos necesarios para que la aplicación funcione correctamente utilizando las tecnologías HTML/CSS/JS
+Al terminar el desarrollo es necesario crear los archivos de distribución del proyecto. Esto consiste en un proceso que elimina la dependencia al entorno de desarrollo que creamos localmente, generando los archivos necesarios para que la aplicación funcione correctamente utilizando las tecnologías HTML/CSS/JS
 ```
 npm run build --prod
 ```
-## con este comando podemos ver que se creó la carpeta **/dist** y dentro de ella deben estar los archivos compilados del proyecto (HTML/CSS/JS)
-# copiar esos archivos en el proyecto del backend (Spring Boot) en el directorio src/main/resources/static 
-# para ver el proyecto corriendo, se debe ingresar por la url del servicio REST al archivo index.html
+con este comando podemos ver que se creó la carpeta **/dist** y dentro de ella deben estar los archivos compilados del proyecto (HTML/CSS/JS).
+Copiar esos archivos en el proyecto del backend (Spring Boot) en el directorio **src/main/resources/static** 
+para ver el proyecto corriendo, se debe ingresar por la url del servicio REST al archivo index.html
 ```
 http://localhost:8080/index.html
 ```
