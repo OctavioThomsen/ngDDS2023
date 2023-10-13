@@ -41,8 +41,10 @@ Al terminar el desarrollo es necesario crear los archivos de distribución del p
 npm run build --prod
 ```
 con este comando podemos ver que se creó la carpeta **/dist** y dentro de ella deben estar los archivos compilados del proyecto (HTML/CSS/JS).
-Copiar esos archivos en el proyecto del backend (Spring Boot) en el directorio **src/main/resources/static** 
-para ver el proyecto corriendo, se debe ingresar por la url del servicio REST al archivo index.html
+
+Copiar esos archivos en el proyecto del backend (Spring Boot) en el directorio **src/main/resources/static**. 
+
+Finalmente, para ver el proyecto corriendo, se debe ingresar por la url del servicio REST al archivo index.html
 ```
 http://localhost:8080/index.html
 ```
