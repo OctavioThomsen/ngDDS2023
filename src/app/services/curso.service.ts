@@ -22,11 +22,6 @@ export class CursoService {
   }
   create(data: any): Observable<any> {
 	console.log(data);
-	//Conversione a form data
-	//const formData = new FormData();
-	//formData.append('title', <string>data.title);
-    //formData.append('status', <string>data.status);
-	//formData.append('content', <string>data.content);
     return this.http.post(`${baseUrl}`, data, {responseType: 'text'});
   }
   update(id: any, data: Curso): Observable<any> {
@@ -48,5 +43,9 @@ export class CursoService {
   }
   findByTitle(nombre: any): Observable<Curso> {
     return this.http.get<Curso>(`${baseUrl}?nombre=${nombre}`);
+  }
+
+  getAllTemas(): Observable<Curso[]> {
+    return this.http.get<Curso[]>('http://localhost:4200/api/temas');
   }
 }
