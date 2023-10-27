@@ -9,7 +9,7 @@
     </div>
     <div>
       <label><strong>Fecha inicio:</strong></label>
-      {{ currentElement.fechaInicio }}
+      {{ currentElement.fechaInicio | date: 'dd/MM/yyyy' }}
     </div>
     <div>
       <label><strong>Tema:</strong></label>
