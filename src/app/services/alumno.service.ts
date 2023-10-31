@@ -10,12 +10,12 @@ const baseUrl = 'http://localhost:4200/api/alumnos';
   providedIn: 'root'
 })
 
-export class TemaService {
+export class AlumnoService {
 
   constructor(private http: HttpClient) { }
   
-  getAll(): Observable<Alumno> {
-    return this.http.get<Alumno>(baseUrl);
+  getAll(): Observable<Alumno[]> {
+    return this.http.get<Alumno[]>(baseUrl);
   }
   get(id: any): Observable<Alumno> {
     return this.http.get<Alumno>(`${baseUrl}/${id}`);
