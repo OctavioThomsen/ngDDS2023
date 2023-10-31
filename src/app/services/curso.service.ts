@@ -44,8 +44,4 @@ export class CursoService {
   findByTitle(nombre: any): Observable<Curso> {
     return this.http.get<Curso>(`${baseUrl}?nombre=${nombre}`);
   }
-
-  getAllTemas(): Observable<Curso[]> {
-    return this.http.get<Curso[]>('http://localhost:4200/api/temas');
-  }
 }

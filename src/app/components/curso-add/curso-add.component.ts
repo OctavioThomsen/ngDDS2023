@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Curso } from 'src/app/models/curso.model';
 import { CursoService } from 'src/app/services/curso.service';
+import { TemaService } from 'src/app/services/tema.service';
 
 @Component({
   selector: 'app-curso-add',
@@ -18,7 +19,9 @@ export class CursoAddComponent implements OnInit {
   temas: any[] = []; // Variable para almacenar la lista de temas
   submitted = false;
   
-  constructor(private cursoService: CursoService) { }
+  constructor(
+    private cursoService: CursoService,
+    private temaService: TemaService) { }
   
   ngOnInit(): void {
     this.getTemas();
@@ -58,7 +61,7 @@ export class CursoAddComponent implements OnInit {
   }
   
   getTemas(): void {
-    this.cursoService.getAllTemas()
+    this.temaService.getAll()
       .subscribe({
         next: (res) => {
           this.temas = res; // Almacena la lista de temas en la variable 'temas'

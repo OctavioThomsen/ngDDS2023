@@ -14,8 +14,8 @@ export class TemaService {
 
   constructor(private http: HttpClient) { }
   
-  getAll(): Observable<Tema> {
-    return this.http.get<Tema>(baseUrl);
+  getAll(): Observable<Tema[]> {
+    return this.http.get<Tema[]>(baseUrl);
   }
   get(id: any): Observable<Tema> {
     return this.http.get<Tema>(`${baseUrl}/${id}`);
