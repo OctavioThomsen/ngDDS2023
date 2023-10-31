@@ -9,13 +9,14 @@ import { TemaService } from 'src/app/services/tema.service';
   styleUrls: ['./curso-add.component.css']
 })
 export class CursoAddComponent implements OnInit {
-  curso: Curso = <Curso>{
+  curso: Curso = <Curso><unknown>{
     nombre: '',
-    fechaInicio: new Date(),
-    idDocente: 1, //campo obligatorio
+    fechaInicio: new Date().toISOString().split('T')[0],
+    idDocente: 1,
     tema: {
-            id: 2 //campo obligatorio
-        } };
+      id: 2 //campo obligatorio
+    }
+  };
   temas: any[] = []; // Variable para almacenar la lista de temas
   submitted = false;
   
