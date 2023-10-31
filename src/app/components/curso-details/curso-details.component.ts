@@ -46,7 +46,6 @@ export class CursoDetailsComponent implements OnInit {
         next: (res) => {
           console.log(res);
           this.message = res.message ? res.message : 'Curso actualizado!';
-          //this.router.navigate(['/cursos']);
         },
         error: (e) => console.error(e)
       });
@@ -56,7 +55,7 @@ export class CursoDetailsComponent implements OnInit {
       .subscribe({
         next: (res) => {
           console.log(res);
-          this.router.navigate(['/cursos']);
+          this.message = res.message ? res.message : 'Curso eliminado!';
         },
         error: (e) => console.error(e)
       });
