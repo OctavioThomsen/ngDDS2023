@@ -14,10 +14,10 @@ export class CursoAddComponent implements OnInit {
     fechaInicio: new Date().toISOString().split('T')[0],
     idDocente: 1,
     tema: {
-      id: 2 //campo obligatorio
+      id: 2
     }
   };
-  temas: any[] = []; // Variable para almacenar la lista de temas
+  temas: any[] = [];
   submitted = false;
   
   constructor(
@@ -57,7 +57,7 @@ export class CursoAddComponent implements OnInit {
       nombre: '',
       fechaInicio: new Date(),
       idDocente: 1,
-      tema: 2 // Puedes establecer un valor por defecto para el tema aquí si es necesario
+      tema: 2
     };
   }
   
@@ -65,7 +65,7 @@ export class CursoAddComponent implements OnInit {
     this.temaService.getAll()
       .subscribe({
         next: (res) => {
-          this.temas = res; // Almacena la lista de temas en la variable 'temas'
+          this.temas = res;
           console.log(res);
         },
         error: (e) => {

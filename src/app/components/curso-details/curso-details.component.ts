@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CursoService } from 'src/app/services/curso.service';
 import { Curso } from 'src/app/models/curso.model';
-import { Tema } from 'src/app/models/tema.model';
 
 @Component({
   selector: 'app-curso-details',
@@ -20,8 +19,7 @@ export class CursoDetailsComponent implements OnInit {
   message = '';
   constructor(
     private cursoService: CursoService,
-    private route: ActivatedRoute,
-    private router: Router) { }
+    private route: ActivatedRoute) { }
   ngOnInit(): void {
     if (!this.viewMode) {
       this.message = '';
@@ -46,16 +44,6 @@ export class CursoDetailsComponent implements OnInit {
         next: (res) => {
           console.log(res);
           this.message = res.message ? res.message : 'Curso actualizado!';
-        },
-        error: (e) => console.error(e)
-      });
-  }
-  deleteElement(): void {
-    this.cursoService.delete(this.currentElement.id)
-      .subscribe({
-        next: (res) => {
-          console.log(res);
-          this.message = res.message ? res.message : 'Curso eliminado!';
         },
         error: (e) => console.error(e)
       });
