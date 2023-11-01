@@ -49,6 +49,10 @@
           type="date"
         />
       </div>
+      <div>
+				<label><strong>Tema:</strong></label>
+				{{ currentElement.tema == null ? "-" : currentElement.tema.nombre }}
+			</div>
     </form>
     <button
       type="submit"
