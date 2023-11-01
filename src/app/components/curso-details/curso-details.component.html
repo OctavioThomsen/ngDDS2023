@@ -13,10 +13,10 @@
       {{ currentElement.tema == null ? "-": currentElement.tema.nombre }}
     </div>    
     <a
-      class="badge badge-warning"
+      class="btn btn-edit"
       routerLink="/cursos/{{ currentElement.id }}"
     >
-      Edit
+      Editar
     </a>
   </div>
   <div *ngIf="!currentElement">
@@ -50,17 +50,17 @@
         />
       </div>
     </form>
-    <button class="badge badge-danger mr-2" (click)="deleteElement()">
-      Delete
-    </button>
     <button
       type="submit"
-      class="badge badge-success mb-2"
+      class="btn btn-success"
       (click)="updateElement()"
     >
-      Update
+      Actualizar
     </button>
     <p>{{ message }}</p>
+    <div class="button-container">
+      <a class="btn btn-primary" href="/cursos">Volver a "Mis cursos"</a>
+    </div>
   </div>
   <div *ngIf="!currentElement.id">
     <br />
