@@ -36,12 +36,18 @@
             {{ tema.nombre }}
           </option>
         </select>
-      </div>      
-      <button (click)="saveCurso()" class="btn btn-success">Submit</button>
+      </div>
+      <button (click)="saveCurso()" class="btn btn-success">Guardar</button>
     </div>
     <div *ngIf="submitted">
       <h4>El curso fue agregado con éxito!</h4>
-      <button class="btn btn-success" (click)="newCurso()">Add</button>
+      <div class="button-container">
+        <button class="btn btn-success" (click)="newCurso()">Agregar otro curso</button>
+      </div>
+      <div class="button-container">
+        <a class="btn btn-primary" href="/cursos">Ir a Cursos</a>
+      </div>
     </div>
+      
   </div>
 </div>
